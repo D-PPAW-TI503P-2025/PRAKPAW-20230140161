@@ -35,6 +35,7 @@ const validatePresensiUpdate = [
 // Terapkan middleware validasi pada endpoint PUT
 router.put('/api/presensi/:id', validatePresensiUpdate, presensiController.updatePresensi);
 
-// ... rute-rute lainnya
+// ... rute-rute lainnya/no changes
+
 
 module.exports = router;

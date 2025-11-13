@@ -107,13 +107,3 @@ exports.deletepresensi = async (req, res) => {
 		res.status(500).json({ message: "Terjadi kesalahan pada server", error: error.message });
 	}
 };
-
-exports.updatePresensi = async (req, res) => {
-	try {
-		const presensiId = req.params.id;
-		const { checkIn, checkOut,nama } = req.body;
-		if checkIn ===  undefined && checkOut === undefined && nama === undefined {
-			return res.status(400).json({ message: "Request body tidak berisi data yang valid untuk diupdate (checkin, checkou atau nama).",});
-		}
-
-		recordToUpdate.CheckIn = checkIn !== undefined ? new Date(checkIn) : recordToUpdate.CheckIn;
