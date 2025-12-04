@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
+import axios from 'axios';
 
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
